@@ -51,6 +51,14 @@ const DataTable = ({ filters }) => {
     resizable: true,
   }), []);
 
+  const handleGridReady = (params) => {
+    params.api.sizeColumnsToFit();
+  };
+
+  const handleFirstDataRendered = (params) => {
+    params.api.sizeColumnsToFit();
+  };
+
   return (
     <Paper sx={{ p: 2 }}>
       <Typography variant="h6" gutterBottom>
@@ -65,6 +73,9 @@ const DataTable = ({ filters }) => {
           paginationPageSize={50}
           animateRows={true}
           loading={loading}
+          suppressBrowserResizeObserver={true}
+          onGridReady={handleGridReady}
+          onFirstDataRendered={handleFirstDataRendered}
         />
       </Box>
     </Paper>
