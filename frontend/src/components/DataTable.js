@@ -25,8 +25,9 @@ const DataTable = ({ filters }) => {
           setRowData(response.data.data || []);
           setTotalRows(response.data.total || 0);
         }
-        if (rowData.length > 0 && columnDefs.length === 0) {
-          const cols = Object.keys(rowData[0]).map(key => ({
+        const data = response.data.data || [];
+        if (data.length > 0 && columnDefs.length === 0) {
+          const cols = Object.keys(data[0]).map(key => ({
             field: key,
             headerName: key,
             sortable: true,
