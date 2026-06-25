@@ -21,6 +21,11 @@
 
 ## Installation
 
+### Project Setup
+```bash
+npm run project-setup
+```
+
 ### Frontend
 
 ```bash
