@@ -18,38 +18,24 @@
 - Pandas
 - PyArrow
 
-### DevOps
-- Docker
-- Docker Compose
 
 ## Installation
 
 ### Frontend
 
 ```bash
-cd client
-npm install
-npm start
+npm run start
 ```
 
 ### Backend
 
 ```bash
-cd server
-npm install
-npm run dev
+npm run backend
 ```
 
 ### Python Service
 
 ```bash
-cd python-service
-pip install -r requirements.txt
-uvicorn app:app --reload
+npm run python-server
 ```
 
-### Docker
-
-```bash
-docker-compose up --build
-```# market-data-explorer
